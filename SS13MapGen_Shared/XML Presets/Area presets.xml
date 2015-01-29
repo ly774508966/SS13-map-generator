@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<areas>
+  <area>
+    <name>Example</name>
+    <BYONDPath>/area/engineering</BYONDPath>
+  </area>
+</areas>
