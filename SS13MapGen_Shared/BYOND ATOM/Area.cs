@@ -12,10 +12,10 @@ namespace SS13MapGen_Shared
     /// <summary>
     /// Contains area info, looks like TOM, but it isn't
     /// </summary>
-    class Area
+    public class BYONDArea
     {
-        public string typePath = "/area";
-        public string name = "Space";
-
+        public string typePath {get; set;}
+        public string name {get; set;}
+        public string srcXML { get; set; }
     }
 }

@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,10 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Static\Config.cs" />
+    <Compile Include="Static\LoadedInstances.cs" />
+    <Compile Include="XML handling\XML readers\mainReader.cs" />
     <Compile Include="BYOND ATOM\TOM.cs" />
     <Compile Include="BYOND ATOM\Area.cs" />
-    <Compile Include="mapTile.cs" />
-    <Compile Include="mapWriter\mapWriter.cs" />
+    <Compile Include="Map Handling\mapTile.cs" />
+    <Compile Include="XML handling\Writers\mapWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,12 +54,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DATA\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="XSD\Area presets.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="XML Presets\Instance presets.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

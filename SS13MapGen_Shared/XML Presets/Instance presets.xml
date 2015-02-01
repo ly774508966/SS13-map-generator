@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instances>
+  <instance>
+    <name>Mechanical Toolbox</name>
+    <path>/obj/item/weapon/storage/toolbox/blue</path>
+    <vars>
+      <var description="Danger. ROBUST."/>
+    </vars>
+  </instance>
+</instances>

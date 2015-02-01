@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <areas>
   <area>
-    <name>Example</name>
+    <name>Engineering</name>
     <BYONDPath>/area/engineering</BYONDPath>
+  </area>
+  <area>
+    <name>Space</name>
+    <BYONDPath>/area</BYONDPath>
   </area>
 </areas>
