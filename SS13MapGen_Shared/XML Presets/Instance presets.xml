@@ -4,7 +4,14 @@
     <name>Mechanical Toolbox</name>
     <path>/obj/item/weapon/storage/toolbox/blue</path>
     <vars>
-      <var description="Danger. ROBUST."/>
+      <var>
+        <varName>desc</varName>
+        <varvalue>"Danger, very robust"</varvalue>
+      </var>
+      <var>
+        <varName>HONKLevel</varName>
+        <varValue>9000</varValue>
+      </var>
     </vars>
   </instance>
 </instances>

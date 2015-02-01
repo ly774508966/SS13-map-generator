@@ -54,6 +54,11 @@ namespace SS13_Map_Generator_UI
             TOM_Instance_Grid.ItemsSource = loadedInstances.loadedTOMs;
         
         }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
         
            
     }

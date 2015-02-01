@@ -89,6 +89,7 @@ namespace SS13MapGen_Shared
             List<BYONDInstance> bufferList = new List<BYONDInstance>();
             BYONDInstance buffer = null;
             string lastName = null;
+            string bufferedVarName = null;
             while (reader.Read())
             {
                 switch (reader.NodeType)
@@ -97,8 +98,15 @@ namespace SS13MapGen_Shared
                         if (reader.Name == "instance")
                         {
                             buffer = new BYONDInstance();
+                            buffer.srcXML = path;
                         }
                         lastName = reader.Name;
+
+                        if (reader.Name == "vars")
+                        {
+                            buffer.differentVars = new Dictionary<string,string>();
+                        }
+
                         break;
                     case XmlNodeType.EndElement:
                         if (reader.Name == "instance")
@@ -113,15 +121,20 @@ namespace SS13MapGen_Shared
                             case "name":
                                 buffer.name = reader.Value; 
                                 break;
+                            case "path":
+                                buffer.typePath = reader.Value;
+                                break;
+                            case "varName":
+                                bufferedVarName = reader.Value;//store the name for now, for easyness sake
+                                break;
+                            case "varValue":
+                                buffer.differentVars.Add(bufferedVarName, reader.Value);
+                                bufferedVarName = null;
+                                break;
 	                    }
                         break;
                 }
             }
-
-
-
-
-
             return bufferList;
         }
     
